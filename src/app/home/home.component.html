@@ -1,0 +1,162 @@
+<div class="card">
+    <!-- <div class=" col-12 main-image">
+  
+      </div> -->
+    <div class="small-buttons row col-12">
+      <div class="background-image1">
+        <img src="../../assets/Web_page1.jpg" class="image1">
+      </div>
+    </div>
+    <div class="col-md-12 boxes" *ngIf="!showMessage">
+      <div class="first-button d-sm-flex">
+        <div class="button1 savebutton">
+          <h3 class="w-100 time2">
+            Save <span class="savedate">The Day</span>
+          </h3>
+        </div>
+        <div class="button1 move ">
+          {{days}} <span class="days">Days</span>
+        </div>
+        <div class="button1 move hoursleft">
+          {{hours}} <span class="hours">Hours</span>
+        </div>
+        <div class="button1 move">
+          {{minutes}} <span class="minutes">Minutes</span>
+        </div>
+        <div class="button1 move">
+          {{seconds}} <span class="seconds">Seconds</span>
+        </div>
+  
+      </div>
+    </div>
+    <div class="col-md-12 boxes engaged" *ngIf="showMessage">
+      They got Engaged....
+    </div>
+    <!-- <div style="margin-top: 1000px;"></div> -->
+    <div class="col-12 row groomnames">
+      <div class="box col-lg-6 col-md-6 col-sm-12 col-xs-12 ramraju">
+        <div id="card-container">
+          <div id="card">
+            <div class="front face">
+              <img class="groom" src="../../assets/supriya.pngg" alt="Bride Image">
+              <p class="clickimage">Click the image</p>
+            </div>
+            <div class="back face" style="padding-top: 100px;">
+              <!-- <h1>Chi La Sow</h1> -->
+              <p class="artist">చి!!ల!!సౌ!!</p>
+              <p class="artist">Bride Name</p>
+              <p class="date">Occupation</p>
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+      <div class="box col-lg-6 col-md-6 col-sm-12 col-xs-12 supriya">
+        <div id="card-container">
+          <div id="card">
+            <div class="front face">
+              <img class="groom" src="../../assets/ramraju.pngg" alt="Groom Image">
+              <p class="clickimage">Click the image</p>
+            </div>
+            <div class="back face" style="padding-top: 100px;">
+              <p class="artist">చి!!</p>
+              <p class="artist">Groom Name</p>
+              <p class="date">Occupation</p>
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <div class="video">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DjkkgshRxEI?rel=0&amp;showinfo=0;controls=0;"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+  
+    </div>
+    <div class="col-12 groomnames1">
+      <img class="pelliphoto" src="../../assets/Time_line.png">
+    </div>
+    <div class="quote">
+      " Two loving hearts , crossing a path , getting united. <br>making a promise , to be in love & life <br> forever...
+      "
+    </div>
+  
+    <div class="video">
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- <iframe class="embed-responsive-item" src="https://youtu.be/AnHS8wSxz9w?rel=0&amp;showinfo=0" allowfullscreen
+          frameborder="0"></iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AnHS8wSxz9w?rel=0&amp;showinfo=0;controls=0;"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  
+  
+    <div class="col-12 piggame row">
+      <div class="col-12 game">
+        Just play a Pig Game<p style="margin: 0;font-size: 12px;margin-top: 10px;">reach 100 to win</p>
+      </div>
+      <div class="col-6" [ngClass]="(this.players == true)? 'active left' : 'inactive left' ">
+        <div class="playername">Player 1</div>
+        <!-- <div class="space"></div> -->
+        <div class="finalscore">
+          {{scores[0]}}
+        </div>
+        <!-- <div class="space"></div> -->
+        <div class="current">
+          <div class="currentscore">
+            {{player1score}}
+          </div>
+        </div>
+        <!-- <div class="space"></div> -->
+      </div>
+      <div class="col-6 right" [ngClass]="(this.players == false)? 'active right' : 'inactive right' ">
+        <div class="playername">Player 2</div>
+        <!-- <div class="space"></div> -->
+        <div class="finalscore">
+          {{scores[1]}}
+        </div>
+        <!-- <div class="space"></div> -->
+        <div class="current">
+          <div class="currentscore">
+            {{player2score}}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 space"></div>
+      <div class="buttons">
+        <div class="dic">
+          <img [src]="img" alt="Playing dice" class="dice" *ngIf="displaydice">
+        </div>
+        <div style="margin-top:20px"></div>
+        <div class="col-12" (click)="rooldice()">
+          <button class="roll">Roll</button>
+        </div>
+        <div style="margin-top:20px"></div>
+        <div class="col-12 row" style="margin: 0;">
+          <div class="col-6" (click)="hold()" style="text-align: center;">
+            <button class="hold">Hold</button>
+          </div>
+          <div class="col-6" (click)="reset()" style="text-align: center;">
+            <button class="newgame">New Game</button>
+          </div>
+  
+        </div>
+        <div style="margin-top:20px"></div>
+        <!-- <div class="col-12">
+  
+        </div> -->
+      </div>
+  
+    </div>
+    <div class="text">
+      <p class="finaltext">Thank You ❤</p>
+    </div>
+  </div>
